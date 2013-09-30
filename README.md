@@ -7,6 +7,16 @@ libnss_nameip_hosts.so
   * Blog: <http://fumiyas.github.io/>
   * Twitter: <https://twitter.com/satoh_fumiyasu>
 
+What's this?
+----------------------------------------------------------------------
+
+NSS (Name Service Switch) module for hosts database.
+
+This module resolves a hostname `ip-10-X-Y-Z.*.compute.internal`
+(AWS internal hostnames) to an IPv4 address `10.X.Y.Z`
+(AWS internal addresses), and resolves an IPv4 address`10.X.Y.Z`
+to a hostname `ip-10-X-Y-Z.compute.internal`.
+
 How to install
 ----------------------------------------------------------------------
 
