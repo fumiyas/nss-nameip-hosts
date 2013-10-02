@@ -13,6 +13,7 @@ build: $(BUILD_TARGETS)
 
 clean:
 	$(RM) -f $(BUILD_TARGETS) *.o
+	cd rpm && $(MAKE) $@
 
 $(OBJS):
 
@@ -21,4 +22,9 @@ libnss_nameip_hosts.so: $(NSS_OBJS)
 
 test-nss-nameip-hosts: $(TEST_OBJS)
 	$(LD) -o $@ $(LDFLAGS) $(TEST_OBJS)
+
+rpm:
+	cd rpm && $(MAKE)
+
+.PHONY: rpm
 

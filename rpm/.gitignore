@@ -1,0 +1,5 @@
+.rpmdb/
+.rpmmacros
+BUILD/
+RPMS/
+SRPMS/
