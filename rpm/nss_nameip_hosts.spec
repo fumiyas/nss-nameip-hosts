@@ -53,7 +53,7 @@ rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)
-%doc README.md
+%doc README.md COPYING
 /%{_lib}/libnss_nameip_hosts-*.so
 /%{_lib}/libnss_nameip_hosts.so.*
 
