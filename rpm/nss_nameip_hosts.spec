@@ -1,6 +1,6 @@
 %define libc_ver %((rpm -q --qf '%%{version}' glibc 2>/dev/null || echo 2) |tail -n1)
 
-Summary: NSS library for NameIP hostname <-> IP address in AWS
+Summary: NSS module for NameIP hostname <-> IP address resolution in AWS
 Name: nss_nameip_hosts
 Version: 0.0.1
 Release: 1%{?dist}
@@ -14,12 +14,13 @@ Source0: nss-nameip-hosts-%{version}.tar.gz
 %endif
 
 %description
-NSS (Name Service Switch) module for hosts database.
+This is a Name Service Switch (NSS) module for NameIP hostname <->
+IP address resolution in Amazon Web Service (AWS).
 
-This module resolves a hostname `ip-10-X-Y-Z.*.compute.internal`
-(AWS internal hostnames) to an IPv4 address `10.X.Y.Z`
-(AWS internal addresses), and resolves an IPv4 address`10.X.Y.Z`
-to a hostname `ip-10-X-Y-Z.compute.internal`.
+The "NameIP hostname" means hostnames in "prefix-IP-AD-DR-ESS.example.com"
+format that are used for internal hostnames of virtual machines in AWS.
+In AWS, internal hostnames are in "ip-10-X-Y-Z.*.compute.internal"
+format that is assgined to an IPv4 address "10.X.Y.Z".
 
 %prep
 %if 0%{?in_source:1}

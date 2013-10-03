@@ -1,5 +1,5 @@
 /*
-   libnss_nameip_hosts
+   NSS module for NameIP hostname <-> IP address resolution in AWS
    Copyright (c) 2013 SATOH Fumiyasu @ OSS Technology Corp., Japan
 
    This program is free software; you can redistribute it and/or modify
