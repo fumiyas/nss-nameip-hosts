@@ -1,4 +1,4 @@
-libnss_nameip_hosts.so
+NSS library for NameIP hostname <-> IP address in AWS
 ======================================================================
 
   * Copyright (c) 2013 SATOH Fumiyasu @ OSS Technology Corp., Japan
