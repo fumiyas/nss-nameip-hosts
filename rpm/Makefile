@@ -7,7 +7,7 @@ RPM_DIRS=	SPECS SOURCES BUILD RPMS SRPMS
 default: rpm
 
 clean:
-	rm -rf $(RPM_FILES) $(RPM_DIRS)
+	rm -rf *.tmp $(RPM_FILES) $(RPM_DIRS)
 
 .rpmmacros: Makefile
 	rm -f $@.tmp
@@ -23,4 +23,3 @@ rpm_dirs:
 
 rpm: .rpmmacros rpm_dirs
 	$(RPMBUILD_X) -bb nss_nameip_hosts.spec
-
